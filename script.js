@@ -1,22 +1,17 @@
 /* 
-    EJERCICIO 18
-Ejercicio de condicionales:
-Escribe una función que tome una cadena como argumento y devuelva "Es una frase" si la cadena contiene espacios en blanco, y "Es una palabra" si la cadena no contiene espacios en blanco.
+    EJERCICIO 19
+Dado un arreglo de nombres, utiliza el método map para crear un nuevo arreglo que contenga solo los nombres en mayúsculas.
 */
 
-let validarFraseOPalabra = (cadena) => {
-  let contieneEspacio = false;
-  for (i = 0; i < cadena.length; i++) {
-    if (cadena[i] === " ") {
-      contieneEspacio = true;
+let arregloDeNombres= ["Micaela,","MILUZKA","Nair","Gonzalo","RAMIRO","MILENKA","OLIVER","PeDro", "ana","MARIA","maryCIELO"];
+
+let nuevoArreglo = arregloDeNombres.map((nombre)=>{
+    for(i=0;i<nombre.length;i++){
+        if(nombre[i]===nombre[i].toLowerCase()){
+            return 0;
+        }
     }
-  }
+    return nombre;
+}).filter((valor)=>valor!==0);
 
-  if (contieneEspacio) {
-    console.log("Es una frase:", cadena);
-  } else {
-    console.log("Es una palabra:", cadena);
-  }
-};
-
-validarFraseOPalabra("Mañana no hay clases");
+console.log(nuevoArreglo);
