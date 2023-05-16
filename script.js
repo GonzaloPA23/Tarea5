@@ -1,13 +1,18 @@
 /* 
-    EJERCICIO 2
-Ejercicio de condicionales:
-Escribe una función que tome un número como argumento y devuelva "Es par" si el número es par, y "Es impar" si el número es impar.
+    EJERCICIO 3
+Ejercicio de map:
+Dado un arreglo de números, utiliza el método map para crear un nuevo arreglo que contenga el cuadrado de cada número(sin usar Math.pow()).
 */
 
-let validar = (numero) => {
-  if (numero % 2 === 0) {
-    console.log(`El número ${numero} es par`);
-  }else console.log(`El número ${numero} es impar`);
-};
+let arregloNumeros = [2,5,10,20,30,40]
 
-validar(-232);
+let arregloAlCuadrado = arregloNumeros.map((_elemento)=>{
+    return _elemento * _elemento;
+})
+
+console.log("Dado el siguiente arreglo",arregloNumeros,"el cuadrado de cada número será: ")
+arregloAlCuadrado.forEach((numero,index) =>{
+    console.log(arregloNumeros[index],"^ 2 = ",numero);
+})
+
+console.log("El núevo arreglo al cuadrado es: ",arregloAlCuadrado);
