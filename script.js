@@ -1,15 +1,24 @@
 /* 
-    EJERCICIO 5
-Ejercicio de reduce:
-Dado un arreglo de números, utiliza el método reduce para calcular la suma de todos los elementos del arreglo.
+    EJERCICIO 6
+Ejercicio combinado:
+Dado un arreglo de palabras, utiliza un bucle y condicionales para crear un nuevo arreglo que contenga solo las palabras que tienen más de 5 caracteres. Luego, utiliza el método map para convertir cada palabra en mayúsculas.
 */
 
-let arregloNumeros = [2,5,10,30,27,1,40,-20]
+let arregloPalabras = ["peruano", "banda", "manzana", "pera", "gasolina", "piñas","profesor","codiGO"];
 
-let sumaNumeros = arregloNumeros.reduce((acumulador,numero)=>{
-    return acumulador += numero;
-},0)
+let LaPalabraEsMayorA5 = () => {
+  let palabrasMayoresA5 = [];
+  for (let i = 0; i < arregloPalabras.length; i++) {
+    if (arregloPalabras[i].length > 5) {
+      palabrasMayoresA5.push(arregloPalabras[i]);
+    }
+  }
+  return palabrasMayoresA5;
+}
 
-console.log("Dado el siguiente arreglo: ", arregloNumeros);
-console.log("La suma total del arreglo es: ", sumaNumeros);
+let arregloEnMayusculas = LaPalabraEsMayorA5().map((texto)=>{
+    return texto.toUpperCase();
+})
 
+console.log("Dado el arreglo: ", arregloPalabras)
+console.log("El nuevo arreglo de palabras en MAYÚSCULAS con letras > 5 es: ",arregloEnMayusculas);
