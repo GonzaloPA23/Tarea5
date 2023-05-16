@@ -1,17 +1,15 @@
-/* 
-    EJERCICIO 19
-Dado un arreglo de nombres, utiliza el método map para crear un nuevo arreglo que contenga solo los nombres en mayúsculas.
+/*
+    EJERCICIO 20
+Ejercicio de filter:
+Dado un arreglo de números, utiliza el método filter para crear un nuevo arreglo que contenga solo los números impares.
 */
 
-let arregloDeNombres= ["Micaela,","MILUZKA","Nair","Gonzalo","RAMIRO","MILENKA","OLIVER","PeDro", "ana","MARIA","maryCIELO"];
+let arregloNumeros=[13,32,2,1,32,43,2,1,63,80]
 
-let nuevoArreglo = arregloDeNombres.map((nombre)=>{
-    for(i=0;i<nombre.length;i++){
-        if(nombre[i]===nombre[i].toLowerCase()){
-            return 0;
-        }
+let nuevoArregloDeImpares = arregloNumeros.filter((numero)=>{
+    if(numero%2!==0){
+        return numero;
     }
-    return nombre;
-}).filter((valor)=>valor!==0);
+})
 
-console.log(nuevoArreglo);
+console.log(nuevoArregloDeImpares)
