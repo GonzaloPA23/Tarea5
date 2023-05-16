@@ -1,13 +1,15 @@
 /* 
-        EJERCICIO 27
-    Ejercicio de map:
-Dado un arreglo de números, utiliza el método map para crear un nuevo arreglo que contenga el doble de cada número.
+        EJERCICIO 28
+Ejercicio de filter:
+Dado un arreglo de palabras, utiliza el método filter para crear un nuevo arreglo que contenga solo las palabras que tengan más de 4 caracteres.
 */
 
-let arregloDeNumeros = [10,20,30,40]
+let arregloDePalabras = ["oso", "muñeco","troglodita",
+"analfabeto","presidente","hola","saco"]
 
-let dobleDelArreglo = arregloDeNumeros.map((_elemento)=>{ 
-    return _elemento * 2;
+let nuevoArreglo = arregloDePalabras.filter((palabra)=>{
+    if(palabra.length>4) return true;
+    else return false;
 })
 
-console.log(dobleDelArreglo)
+console.log(nuevoArreglo)
