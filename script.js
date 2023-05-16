@@ -1,15 +1,14 @@
 /* 
-    EJERCICIO 10
-Ejercicio de condicionales:
-Escribe una función que tome un número como argumento y devuelva "Positivo" si el número es mayor que 0, "Negativo" si el número es menor que 0, y "Cero" si el número es igual a 0.
+    EJERCICIO 11
+Ejercicio de map:
+Dado un arreglo de palabras, utiliza el método map para crear un nuevo arreglo que contenga la longitud de cada palabra.
 */
 
-let EsPositivoNegativo = (numero) =>{
-    if(numero > 0){
-        console.log(`El número ${numero} es positivo`)
-    }else if(numero === 0){
-        console.log(`El número ${numero} es cero`)
-    }else{console.log(`El número ${numero} es negativo`)}
-}
+let arregloDePalabras = ["legal","hablaremos","cambió","solas","prisionero","odie","ocupada","llevarlo","estuvimos","decírselo"]
 
-EsPositivoNegativo(-2343);
+let nuevoArregloDeLongitudes = arregloDePalabras.map((texto)=>{
+    return texto.length;
+})
+
+console.log("Este es el arreglo de palabras: ",arregloDePalabras)
+console.log("Este es el arreglo de longitudes de las palabras dadas: ",nuevoArregloDeLongitudes);
