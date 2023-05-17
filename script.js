@@ -1,16 +1,11 @@
 /* 
-        EJERCICIO 29
-Ejercicio de reduce:
-Dado un arreglo de números, utiliza el método reduce para calcular el producto de los números pares.
+        EJERCICIO 33
+Ejercicio de bucles:
+Escribe un bucle que imprima los números impares del 1 al 50 en la consola.
 */
 
-let numeros = [2, 3, 43, 1, 4, 10, 20];
-
-let productoNumeroPares = numeros.reduce((acumulador, numero) => {
-  if (numero % 2 === 0) {
-    acumulador *= numero;
+for (let i = 0; i < 50; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
   }
-  return acumulador;
-}, numeros.some(numero => numero % 2 === 0) ? 1 : 0);
-
-console.log(productoNumeroPares);
+}
