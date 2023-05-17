@@ -1,23 +1,17 @@
 /* 
-        EJERCICIO 90
-Ejercicio de funciones:
-Crea una función llamada contarCaracter que tome una cadena y un carácter como argumentos, y devuelva la cantidad de veces que aparece ese carácter en la cadena.
+        EJERCICIO 91
+Ejercicio similar al Project Euler #1:
+Encuentra la suma de todos los números naturales múltiplos de 3 o 5 por debajo de 1000.
 */
 
-
-const contarCaracter = (cadena, caracter) => {
-    let contador = 0;
-    
-    for (let i = 0; i < cadena.length; i++) {
-      if (cadena[i] === caracter) {
-        contador++;
-      }
+let sumaNumeros = () =>{
+    let suma = 0;
+    for(let i = 1; i < 1000; i++){
+        if(i % 3 === 0 || i % 5 === 0){
+            suma += i;
+        }
     }
-    
-    return contador;
-  };
-  
-  console.log(contarCaracter("Hola mundo", "o"));     
-  console.log(contarCaracter("Bienvenidos", "f"));   
-  console.log(contarCaracter("Programación", "a"));  
-  
+    return suma
+}
+
+console.log(sumaNumeros());
