@@ -1,15 +1,16 @@
 /* 
-        EJERCICIO 28
-Ejercicio de filter:
-Dado un arreglo de palabras, utiliza el método filter para crear un nuevo arreglo que contenga solo las palabras que tengan más de 4 caracteres.
+        EJERCICIO 29
+Ejercicio de reduce:
+Dado un arreglo de números, utiliza el método reduce para calcular el producto de los números pares.
 */
 
-let arregloDePalabras = ["oso", "muñeco","troglodita",
-"analfabeto","presidente","hola","saco"]
+let numeros = [2, 3, 43, 1, 4, 10, 20];
 
-let nuevoArreglo = arregloDePalabras.filter((palabra)=>{
-    if(palabra.length>4) return true;
-    else return false;
-})
+let productoNumeroPares = numeros.reduce((acumulador, numero) => {
+  if (numero % 2 === 0) {
+    acumulador *= numero;
+  }
+  return acumulador;
+}, numeros.some(numero => numero % 2 === 0) ? 1 : 0);
 
-console.log(nuevoArreglo)
+console.log(productoNumeroPares);
