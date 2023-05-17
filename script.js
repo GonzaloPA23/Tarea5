@@ -1,14 +1,12 @@
 /* 
-        EJERCICIO 75
-Ejercicio de funciones flecha:
-Convierte la función filtrarPositivos en una función flecha.
+        EJERCICIO 118 -> 28
+Implementa una función obtenerImpares que tome un número indeterminado de argumentos numéricos y retorne un nuevo arreglo con los números impares.
 */
 
-
-const filtrarPositivos = (numeros) => {
-  return numeros.filter(numero => numero > 0);
+const obtenerImpares = (...numeros) => {
+  return numeros.filter((numero) => numero % 2 !== 0);
 };
 
-// Ejemplo de uso
-const numeros = [-2, 5, -10, 8, -3, 0, 12];
-console.log(filtrarPositivos(numeros)); // [5, 8, 12]
+console.log(obtenerImpares(1, 2, 3, 4, 5)); // [1, 3, 5]
+console.log(obtenerImpares(10, 11, 12, 13, 14, 15)); // [11, 13, 15]
+console.log(obtenerImpares(2, 4, 6)); // []
