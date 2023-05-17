@@ -1,11 +1,14 @@
 /* 
-        EJERCICIO 82
-Ejercicio de funciones flecha:
-Convierte la función esSubstring en una función flecha.
+        EJERCICIO 74
+Ejercicio de funciones:
+Crea una función llamada filtrarPositivos que tome un arreglo de números como argumento y devuelva un nuevo arreglo con solo los números positivos.
 */
-const esSubstring = (cadena1, cadena2) => {
-    return cadena1.includes(cadena2);
-};
-  
-  console.log(esSubstring("Hola mundo", "mundo")); // true
-  console.log(esSubstring("Hola mundo", "adiós")); // false
+
+function filtrarPositivos(numeros) {
+  return numeros.filter((numero) => numero > 0);
+}
+
+// Ejemplo de uso
+const numeros = [-2, 5, -10, 8, -3, 0, 12];
+console.log(filtrarPositivos(numeros)); // [5, 8, 12]
+
