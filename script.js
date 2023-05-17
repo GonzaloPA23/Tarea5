@@ -1,11 +1,11 @@
 /* 
-        EJERCICIO 87
-Ejercicio de funciones:
-Crea una función llamada calcularPotencia que tome dos números como argumento: la base y el exponente, y devuelva el resultado de elevar la base al exponente.
+        EJERCICIO 88
+Ejercicio de funciones flecha:
+Convierte la función calcularPotencia en una función flecha.
 */
 
 
-function calcularPotencia(base,exponente){
+let calcularPotencia = (base, exponente) =>{
     return base ** exponente;
 }
 
