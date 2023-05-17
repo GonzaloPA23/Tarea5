@@ -1,11 +1,11 @@
 /* 
-        EJERCICIO 33
-Ejercicio de bucles:
-Escribe un bucle que imprima los números impares del 1 al 50 en la consola.
+        EJERCICIO 34
+Ejercicio de condicionales:
+Escribe una función que tome dos números como argumentos y devuelva el mayor de los dos.
 */
 
-for (let i = 0; i < 50; i++) {
-  if (i % 2 !== 0) {
-    console.log(i);
-  }
+let ValidarMayor = (a,b) =>{
+    (a > b) ? console.log(a,"Es mayor que", b) : console.log(b,"Es mayor que",a);
 }
+
+ValidarMayor(220,120);
