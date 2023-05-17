@@ -1,18 +1,15 @@
 /* 
-        EJERCICIO 72
-Ejercicio de funciones flecha:
-Convierte la función esPrimo en una función flecha.
+        EJERCICIO 87
+Ejercicio de funciones:
+Crea una función llamada calcularPotencia que tome dos números como argumento: la base y el exponente, y devuelva el resultado de elevar la base al exponente.
 */
 
 
-let esPrimo = numero =>{
-    if (numero === 1) return false;
-    for(let i = 2; i < numero; i++){
-        if (numero % i === 0) return false;
-    }
-
-    return true;
+function calcularPotencia(base,exponente){
+    return base ** exponente;
 }
 
-console.log(esPrimo(5))
+let n = 2;
+let exponente = 3;
+console.log(n,"^",exponente,"=",calcularPotencia(n,exponente))
 
