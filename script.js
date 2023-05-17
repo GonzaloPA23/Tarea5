@@ -1,14 +1,13 @@
 /* 
-        EJERCICIO 36
-Dado un arreglo de números, utiliza el método filter para crear un nuevo arreglo que contenga solo los números divisibles por 3.
+        EJERCICIO 37
+Ejercicio de reduce:
+Dado un arreglo de palabras, utiliza el método reduce para concatenar todas las palabras en una sola cadena.
 */
 
-let arregloDeNumeros = [30,3,1,23,45,67,10,2,5]
+let arregloDePalabras = ["perro","gato","pizarra","marisco","pizza","comida","chef","ganador","vilchez"];
 
-let nuevoArregloDivisiblePor3 = arregloDeNumeros.filter((num)=>{
-    if(num % 3 === 0){
-        return num;
-    }
+let nuevoArreglo = arregloDePalabras.reduce((concatenada,palabras)=>{
+    return concatenada + palabras;
 })
 
-console.log(nuevoArregloDivisiblePor3);
+console.log(nuevoArreglo);
