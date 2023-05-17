@@ -1,16 +1,25 @@
 /* 
-        EJERCICIO 62
-Ejercicio de funciones flecha:
-Convierte la función calcularFactorial en una función flecha.
+        EJERCICIO 70
+Ejercicio de funciones:
+Crea una función llamada contarVocales que tome una cadena como argumento y devuelva la cantidad de vocales que contiene.
 */
 
-let calcularFactorial = (n) => {
-  if (n === 0 || n === 1) {
-    return 1;
-  } else {
-    return n * calcularFactorial(n - 1);
-  }
-};
+const vocales = ['a','e','i','o','u']
 
-let numero = 6;
-console.log(`${numero}! =`, calcularFactorial(numero)); // 120
+let contarVocales = cadena =>{
+    cadena = cadena.toLowerCase();
+    let contador = 0;
+
+    for(let i = 0; i < cadena.length;i++){
+       if(vocales.includes(cadena[i])){
+        contador ++;
+       } 
+    }
+    return contador;
+}
+
+console.log(contarVocales("Externo"));
+console.log(contarVocales("El amor de Dios es maravilloso"));
+
+
+
