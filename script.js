@@ -1,10 +1,11 @@
 /* 
-        EJERCICIO 71
-Crea una función llamada esPrimo que tome un número como argumento y devuelva true si es un número primo y false si no lo es.
+        EJERCICIO 72
+Ejercicio de funciones flecha:
+Convierte la función esPrimo en una función flecha.
 */
 
 
-function esPrimo(numero){
+let esPrimo = numero =>{
     if (numero === 1) return false;
     for(let i = 2; i < numero; i++){
         if (numero % i === 0) return false;
@@ -13,5 +14,5 @@ function esPrimo(numero){
     return true;
 }
 
-console.log(esPrimo(47))
+console.log(esPrimo(5))
 
