@@ -1,19 +1,18 @@
 /* 
-        EJERCICIO 39
-Ejercicio combinado:
-Dado un arreglo de números, utiliza el método filter para crear un nuevo arreglo que contenga solo los números positivos. Luego, utiliza el método reduce para calcular la suma de los números seleccionados.
+        EJERCICIO 41
+Crea una función llamada saludar que tome un nombre como argumento y devuelva un mensaje de saludo, por ejemplo: "¡Hola, [nombre]!"
 */
 
-let arregloDeNumeros = [32,4,33,5,-24,-2,-45,-10,20];
+function saludar(nombre){
+    console.log(`¡Hola ${nombre}!`)
+}
 
-let nuevoArregloPositivo = arregloDeNumeros.filter((num)=>{
-    if(num > 0) return num;
-})
+saludar("Gonzalo");
 
-let sumaDePositivos = nuevoArregloPositivo.reduce((acumulador, numero)=>{
-    return acumulador += numero;
-},0)
+/* EJERCICIO 42
+Convierte la función saludar en una función flecha.
+*/
 
-console.log("Dado el siguiente arreglo:", arregloDeNumeros);
-console.log("El nuevo arreglo de solo números positivos: ",nuevoArregloPositivo);
-console.log("La suma del arreglo de positivos es:",sumaDePositivos);
+let saludo = nombre => console.log(`Ten un buen día ${nombre}`);
+
+saludo("Piero");
