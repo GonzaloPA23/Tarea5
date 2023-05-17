@@ -1,15 +1,23 @@
 /* 
-        EJERCICIO 88
-Ejercicio de funciones flecha:
-Convierte la función calcularPotencia en una función flecha.
+        EJERCICIO 90
+Ejercicio de funciones:
+Crea una función llamada contarCaracter que tome una cadena y un carácter como argumentos, y devuelva la cantidad de veces que aparece ese carácter en la cadena.
 */
 
 
-let calcularPotencia = (base, exponente) =>{
-    return base ** exponente;
-}
-
-let n = 2;
-let exponente = 3;
-console.log(n,"^",exponente,"=",calcularPotencia(n,exponente))
-
+const contarCaracter = (cadena, caracter) => {
+    let contador = 0;
+    
+    for (let i = 0; i < cadena.length; i++) {
+      if (cadena[i] === caracter) {
+        contador++;
+      }
+    }
+    
+    return contador;
+  };
+  
+  console.log(contarCaracter("Hola mundo", "o"));     
+  console.log(contarCaracter("Bienvenidos", "f"));   
+  console.log(contarCaracter("Programación", "a"));  
+  
