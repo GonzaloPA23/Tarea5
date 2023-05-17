@@ -1,15 +1,16 @@
 /* 
-        EJERCICIO 46
-Ejercicio de funciones anónimas:
-Crea una función anónima que tome un arreglo de palabras como argumento y devuelva un nuevo arreglo con la longitud de cada palabra.
+        EJERCICIO 61
+Ejercicio de funciones:
+Crea una función llamada calcularFactorial que tome un número como argumento y devuelva el factorial de ese número.
 */
 
-const obtenerLongitudPalabras = (...arreglo) => {
-  return arreglo.map((palabra) => palabra.length);
-};
+function calcularFactorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * calcularFactorial(n - 1);
+  }
+}
 
-const palabras = ["Hola", "mundo", "JavaScript", "funciones", "anónimas","Aprendiendo mucho"];
-const longitudes = obtenerLongitudPalabras(...palabras);
-
-console.log(palabras);
-console.log(longitudes); // [4, 5, 10, 9, 8]
+let numero = 5;
+console.log(`${numero}! =`,calcularFactorial(numero)); // 120
