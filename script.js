@@ -1,11 +1,14 @@
 /* 
-        EJERCICIO 34
-Ejercicio de condicionales:
-Escribe una función que tome dos números como argumentos y devuelva el mayor de los dos.
+        EJERCICIO 35
+Ejercicio de map:
+Dado un arreglo de palabras, utiliza el método map para crear un nuevo arreglo que contenga la primera letra de cada palabra.
 */
 
-let ValidarMayor = (a,b) =>{
-    (a > b) ? console.log(a,"Es mayor que", b) : console.log(b,"Es mayor que",a);
-}
+let arregloDePalabras = ["perro","gato","pizarra","marisco","pizza","comida","chef","ganador","vilchez"];
 
-ValidarMayor(220,120);
+let nuevoArregloPrimeraLetra = arregloDePalabras.map((palabra)=>{
+    return palabra[0];
+})
+
+console.log(arregloDePalabras);
+console.log(nuevoArregloPrimeraLetra);
