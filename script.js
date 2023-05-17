@@ -1,27 +1,11 @@
 /* 
-        EJERCICIO 96
-Ejercicio similar al Project Euler #16:
-Calcula la suma de los dígitos del número 2^1000.
+        EJERCICIO 81
+Ejercicio de funciones:
+Crea una función llamada esSubstring que tome dos cadenas como argumento y devuelva true si la segunda cadena es un subconjunto de la primera cadena y false si no lo es.
 */
+function esSubstring(cadena1, cadena2) {
+  return cadena1.includes(cadena2);
+}
 
-
-let calcularPotencia = (base, exponente) => {
-  return BigInt(base) ** BigInt(exponente); // Utilizar BigInt para números grandes
-};
-
-let sumaDigitos = (numero) => {
-  let suma = 0;
-  let numeroString = numero.toString();
-
-  for (let i = 0; i < numeroString.length; i++) {
-    suma += parseInt(numeroString[i]);
-  }
-
-  return suma;
-};
-
-let n = 2;
-let exponente = 1000;
-let resultado = calcularPotencia(n, exponente);
-console.log("2^1000 =", resultado);
-console.log("Suma de los dígitos:", sumaDigitos(resultado));
+console.log(esSubstring("Hola mundo", "mundo")); // true
+console.log(esSubstring("Hola mundo", "adiós")); // false
