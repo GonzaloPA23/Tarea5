@@ -1,25 +1,17 @@
 /* 
-        EJERCICIO 70
-Ejercicio de funciones:
-Crea una función llamada contarVocales que tome una cadena como argumento y devuelva la cantidad de vocales que contiene.
+        EJERCICIO 71
+Crea una función llamada esPrimo que tome un número como argumento y devuelva true si es un número primo y false si no lo es.
 */
 
-const vocales = ['a','e','i','o','u']
 
-let contarVocales = cadena =>{
-    cadena = cadena.toLowerCase();
-    let contador = 0;
-
-    for(let i = 0; i < cadena.length;i++){
-       if(vocales.includes(cadena[i])){
-        contador ++;
-       } 
+function esPrimo(numero){
+    if (numero === 1) return false;
+    for(let i = 2; i < numero; i++){
+        if (numero % i === 0) return false;
     }
-    return contador;
+
+    return true;
 }
 
-console.log(contarVocales("Externo"));
-console.log(contarVocales("El amor de Dios es maravilloso"));
-
-
+console.log(esPrimo(47))
 
